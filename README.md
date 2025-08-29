@@ -1,28 +1,21 @@
-# Martin Saveski's Website
+# Kesego Mokgosi's Website
+
+Personal website showcasing research, experience, and achievements of Kesego Mokgosi, PhD Candidate in Cognitive Systems & Artificial Intelligence at Technological University Dublin.
 
 ## Updates guide
 Change one of the files in `_data`, unless you are changing the look of the website.
 
-Test changes with:
+Test changes locally with:
 ```
 jekyll serve
 ```
 
-Push to the ML web directory:
+Deploy to GitHub Pages:
 ```
-rm -rf public_html
-mkdir public_html
+git add .
+git commit -m "Update website"
+git push origin master
 ```
-```
-./__deploy.sh
-```
-
-More info on the [Media Lab wiki](http://wiki.media.mit.edu/view/Necsys/WebPagePersonal).
-
-**Stanford links**
-- Use fetch!
-- [Basic WWW for Individual Users](https://uit.stanford.edu/service/web/centralhosting/howto_user)
-- [AFS File Transfer](https://uit.stanford.edu/service/afs/file-transfer/macintosh)
 
 
 ## External Libraries
