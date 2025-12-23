@@ -6,15 +6,27 @@ title: Home
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   <p>
-  I am a passionate innovator and problem solver from Botswana, sub-Saharan Africa. I am a self-taught <b>full stack developer</b> and <b>AI enthusiast</b> with research interests in <b>Automatic Speech Recognition</b>, <b>Speech Synthesis</b>, <b>Conversational AI</b>, and <b>Machine Learning applications</b>.
-  My research often falls at the intersections of Automatic Speech Recognition, Speech Synthesis, Reinforcement Learning, Deep Learning, and Generative AI.
+    I am a passionate innovator and problem solver from Botswana, sub-Saharan Africa. I am a self-taught <b>full stack
+      developer</b> and <b>AI enthusiast</b> with research interests in <b>Automatic Speech Recognition</b>, <b>Speech
+      Synthesis</b>, <b>Conversational AI</b>, and <b>Machine Learning applications</b>.
+    My research often falls at the intersections of Automatic Speech Recognition, Speech Synthesis, Reinforcement
+    Learning, Deep Learning, and Generative AI.
   </p>
 
   <p>
-  I am currently pursuing my <b>PhD in Computer Science</b> at the Technological University Dublin, Ireland, under the supervision of <a href="{{ site.data.main_info.robert_ross_scholar }}" target="_blank"><b>Dr. Robert Ross</b></a> and <a href="{{ site.data.main_info.cathy_ennis_scholar }}" target="_blank"><b>Dr. Cathy Ennis</b></a>. 
-  Before starting my PhD, I was the Head of Technology at Xavier Africa, where I worked as a Conversational AI architect and developed cross-platform projects for agency clients. 
-  I am also the founder of Anton Tech, which received the 2021 Botswana Innovation Fund to develop solutions that detect transboundary diseases using geospatial data.
-  I graduated with First Class honors and as Valedictorian from both the University of Sunderland and Botswana Accountancy College in Computer Systems Engineering.
+    I am currently pursuing my <b>PhD in Computer Science</b> at the Technological University Dublin, Ireland, under the
+    supervision of <a href="{{ site.data.main_info.robert_ross_scholar }}" target="_blank"><b>Dr. Robert Ross</b></a>
+    and <a href="{{ site.data.main_info.cathy_ennis_scholar }}" target="_blank"><b>Dr. Cathy Ennis</b></a>.
+    I have also worked with <a href="{{ site.data.main_info.vukosi_marivate_scholar }}" target="_blank"><b>Professor
+        Vukosi Marivate</b></a> at the University of Pretoria on the <b>NextVoices</b>
+    project as a Speech ML researcher focusing on African Languages.
+    Before starting my PhD, I was the Head of Technology at Xavier Africa, where I worked as a Conversational AI
+    architect and developed cross-platform projects for agency clients.
+    I am also the founder of Anton Tech, which received the 2021 Botswana Innovation Fund to develop Agritech solutions
+    in
+    the finance sector.
+    I graduated with First Class honors and as Valedictorian from both the University of Sunderland and Botswana
+    Accountancy College in Computer Systems Engineering.
   </p>
 </div>
 
@@ -23,86 +35,91 @@ title: Home
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
 
-  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
-  <sup>‡</sup> indicates equal contribution.
+  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google
+      Scholar</a>.<br />
+    <sup>‡</sup> indicates equal contribution.
   </p>
 
   <ul class="tab-nav">
-    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
+    <li>
+      <div class="button active" data-ref="#papers-selected">Selected</div>
+    </li>
+    <li>
+      <div class="button" data-ref="#papers-all">All</div>
+    </li>
   </ul>
 
   <div class="tab-content">
     <div class="tab-pane active" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+          {% endif %}
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
+          {% if paper.slides %}
+          <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+          {% endif %}
 
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
+          {% if paper.poster %}
+          <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+          {% endif %}
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+          {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
 
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
+          {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
 
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
+          {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
 
-          </div>
         </div>
+      </div>
       {% endfor %}
     </div>
 
     <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+          {% endif %}
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
+          {% if paper.slides %}
+          <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+          {% endif %}
 
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
+          {% if paper.poster %}
+          <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+          {% endif %}
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+          {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %}
 
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
+          {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %}
 
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
+          {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
 
-          </div>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -111,27 +128,28 @@ title: Home
 <!-- ========== SKILLS ========== -->
 <div class="docs-section" id="skills">
   <h4>Skills & Technologies</h4>
-  
+
   <div class="skills-category">
     <h5>Programming Languages & Frameworks</h5>
     <p>JavaScript, TypeScript, Python, SQL, NoSQL, NextJS, React, FastAPI, Golang, C++, PyTorch</p>
   </div>
-  
+
   <div class="skills-category">
     <h5>Cloud & Infrastructure</h5>
     <p>AWS, Google Cloud Platform (GCP), Azure, Slurm,Langchain, Weaviate, Quadrant</p>
   </div>
-  
+
   <div class="skills-category">
     <h5>AI & Machine Learning</h5>
-    <p>Machine Learning, Natural Language Processing, Reinforcement Learning,Speech Synthesis, Automatic Speech Recognition,Audio and Signal Processing</p>
+    <p>Machine Learning, Natural Language Processing, Reinforcement Learning,Speech Synthesis, Automatic Speech
+      Recognition,Audio and Signal Processing</p>
   </div>
-  
+
   <div class="skills-category">
     <h5>Development & APIs</h5>
     <p>Full Stack Development</p>
   </div>
-  
+
   <div class="skills-category">
     <h5>Other</h5>
     <p>Project Management, Data Engineering, Data Analytics</p>
@@ -141,40 +159,40 @@ title: Home
 <!-- ========== ACCOLADES ========== -->
 <div class="docs-section" id="accolades">
   <h4>Awards & Accolades</h4>
-  
+
   <div class="accolades-list">
     <div class="accolade">
       <p class="accolade-title"><b>Creative Business Cup Botswana Winner</b> (2023)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Winner - BothoHacks Hackathon</b> (2020)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Winner - National STEM Hackathon, BIUST</b> (2020)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Winner - Botswana Innovation Hub Hackathon</b> (2022)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Gold Medallist - BOTSA Informatics Olympiad</b> (2017)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>International Olympiad of Metropolis Finalist, Russia</b> (2017)</p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Agritech Startup of the Year - Southern Africa Startup Awards</b></p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>Southern Africa Innovation Collective (SAIC) BoostUp National Champions</b></p>
     </div>
-    
+
     <div class="accolade">
       <p class="accolade-title"><b>2nd Prize - Forbes Africa Summit Pitch Competition</b> (2023)</p>
     </div>
@@ -184,13 +202,14 @@ title: Home
 <!-- ========== CERTIFICATIONS ========== -->
 <div class="docs-section" id="certifications">
   <h4>Selected Certifications</h4>
-  
+
   <div class="certifications-list">
     <div class="certification">
       <p class="cert-title"><b>Google Data Analytics Professional Certification</b></p>
-      <p class="cert-link"><a href="https://www.credly.com/badges/031b3e62-b130-4854-b385-5b3a713ed02c" target="_blank">View Certificate</a></p>
+      <p class="cert-link"><a href="https://www.credly.com/badges/031b3e62-b130-4854-b385-5b3a713ed02c"
+          target="_blank">View Certificate</a></p>
     </div>
-    
+
 
   </div>
 </div>
@@ -282,18 +301,16 @@ title: Home
     <li>
       {% if exp.category == "work" %}
       <div class="direction-l">
-      {% else %}
-      <div class="direction-r">
-      {% endif %}
-        <div class="flag-wrapper">
-          <span class="flag">{{ exp.place }}</span>
-          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+        {% else %}
+        <div class="direction-r">
+          {% endif %}
+          <div class="flag-wrapper">
+            <span class="flag">{{ exp.place }}</span>
+            <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+          </div>
+          <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle }}</div>
         </div>
-        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
-      </div>
     </li>
     {% endfor %}
   </ul>
 </div>
-
-  

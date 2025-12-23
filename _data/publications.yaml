@@ -1,5 +1,17 @@
 papers:
 
+  - title: "Swivuriso: The South African Next Voices Multilingual Speech Dataset"
+    authors: "Vukosi Marivate, Kayode Olaleye, Sello Mundia, Andrew Bakainga, Unarine Netshifhefhe, Mzoeli Milanzie, Tshepiso H. Mogale, Thabang Sindane, Zulaihat Abdulrasaq, <b>Kesego Mokgosi</b>, Chimezie Okorie"
+    venue: "arXiv preprint arXiv:2512.02201. 2025."
+    paper_pdf: "https://arxiv.org/abs/2512.02201"
+    selected: y
+
+  - title: "Artificial intelligence (AI)-driven technologies for managing pediatric speech and language therapy: A scoping review"
+    authors: "Milad Dadgar, Cathy Ennis, <b>Kesego Mokgosi</b>, Robert Ross"
+    venue: "Digital Health, 11, p.20552076251376533. 2025."
+    paper_pdf: "https://journals.sagepub.com/doi/full/10.1177/20552076251376533"
+    selected: y
+
   - title: "Synthesising Cross-Speaker Data for Low-Resource Pathological Speech Recognition with PEFT"
     authors: "<b>Kesego Mokgosi</b>, Milad Dadgar, Cathy Ennis, Robert Ross"
     venue: "TSD'25: Text, Speech, and Dialogue Conference. Lecture Notes in Computer Science, Springer. 2025."
