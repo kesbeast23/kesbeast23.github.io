@@ -2,7 +2,9 @@ source:      .
 destination: ./_site
 includes:    ./_includes
 baseurl: ""
+url: "https://kesbeast23.github.io"
 
 collections:
+  # _projects still holds the template author's own projects, so they are not published
   projects:
-    output: true
+    output: false

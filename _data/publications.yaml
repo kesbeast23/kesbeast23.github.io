@@ -1,7 +1,13 @@
 papers:
 
+  - title: "Tone-Conditioned Curriculum Learning for Low-Resource Bantu Speech Recognition"
+    authors: "<b>Kesego Mokgosi</b>, Vukosi Marivate, Sitwala Mundia, Unarine Netshifhefhe, Tsholofelo Mogale, Thapelo Sindane"
+    venue: "Proc. Interspeech 2026, pp. 2847–2851. 2026."
+    paper_pdf: "https://www.isca-archive.org/interspeech_2026/mokgosi26_interspeech.html"
+    selected: y
+
   - title: "Swivuriso: The South African Next Voices Multilingual Speech Dataset"
-    authors: "Vukosi Marivate, Kayode Olaleye, Sello Mundia, Andrew Bakainga, Unarine Netshifhefhe, Mzoeli Milanzie, Tshepiso H. Mogale, Thabang Sindane, Zulaihat Abdulrasaq, <b>Kesego Mokgosi</b>, Chimezie Okorie"
+    authors: "Vukosi Marivate, Kayode Olaleye, Sitwala Mundia, Andinda Bakainga, Unarine Netshifhefhe, Mahmooda Milanzie, Tsholofelo H. Mogale, Thapelo Sindane, Zainab Abdulrasaq, <b>Kesego Mokgosi</b>, Chijioke Okorie, et al."
     venue: "arXiv preprint arXiv:2512.02201. 2025."
     paper_pdf: "https://arxiv.org/abs/2512.02201"
     selected: y

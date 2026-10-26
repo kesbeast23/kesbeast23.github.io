@@ -6,13 +6,43 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{{ site.data.main_info.name }} | {{ page.title }}</title>
-  <meta name="description" content="Kesego Mokgosi - PhD Candidate in Cognitive Systems & AI, Full Stack Developer">
+  <meta name="description" content="{{ site.data.main_info.description }}">
   <meta name="author" content="Kesego Mokgosi">
   <meta property="og:title" content="Kesego Mokgosi" />
+  <meta property="og:description" content="{{ site.data.main_info.description }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kesbeast23.github.io" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ site.data.main_info.profile_pic | absolute_url }}" />
   <meta property="og:site_name" content="Kesego Mokgosi" />
-  <link rel="canonical" href="https://kesbeast23.github.io" />
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+  <!-- Structured data: tells search engines this site is about the person Kesego Mokgosi
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.data.main_info.name | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "image": {{ site.data.main_info.profile_pic | absolute_url | jsonify }},
+    "description": {{ site.data.main_info.description | jsonify }},
+    "jobTitle": {{ site.data.main_info.title | jsonify }},
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Technological University Dublin" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Sunderland" },
+      { "@type": "CollegeOrUniversity", "name": "Botswana Accountancy College" }
+    ],
+    "knowsAbout": ["Automatic Speech Recognition", "Speech Synthesis", "Conversational AI", "Machine Learning"],
+    "sameAs": [
+      {{ site.data.main_info.linkedin | jsonify }},
+      {{ site.data.main_info.github | jsonify }},
+      {{ site.data.main_info.google_scholar | jsonify }},
+      {{ site.data.main_info.medium | jsonify }},
+      {{ site.data.main_info.youtube | jsonify }},
+      {{ site.data.main_info.instagram | jsonify }}
+    ]
+  }
+  </script>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -70,36 +100,36 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' alt="{{ site.data.main_info.name }}"></a>
         </div>
         <div class="nine columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
             <p>{{ site.data.main_info.title }}</p>
             <p>{{ site.data.main_info.email }}</p>
             <p>
-              <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.linkedin }}" target="_blank" rel="me noopener" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin fa-lg"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.github }}" target="_blank" rel="me noopener" aria-label="GitHub">
                 <i class="fa-brands fa-github fa-lg"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="me noopener" aria-label="Google Scholar">
                 <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.medium }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.medium }}" target="_blank" rel="me noopener" aria-label="Medium">
                 <i class="fa-brands fa-medium fa-lg"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.youtube }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.youtube }}" target="_blank" rel="me noopener" aria-label="YouTube">
                 <i class="fa-brands fa-youtube fa-lg"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.instagram }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.instagram }}" target="_blank" rel="me noopener" aria-label="Instagram">
                 <i class="fa-brands fa-instagram fa-lg"></i>
-              </span>
+              </a>
             </p>
         </div>
       </div>
@@ -130,29 +160,29 @@
           {{ site.data.main_info.email }}
         </div>
         <div class="four columns">
-          <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.linkedin }}" target="_blank" rel="me noopener" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
-          </span>
+          </a>
 
-          <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.github }}" target="_blank" rel="me noopener" aria-label="GitHub">
             <i class="fa-brands fa-github"></i>
-          </span>
+          </a>
 
-          <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="me noopener" aria-label="Google Scholar">
             <i class="ai ai-google-scholar" aria-hidden="true"></i>
-          </span>
+          </a>
 
-          <span onclick="window.open('{{ site.data.main_info.medium }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.medium }}" target="_blank" rel="me noopener" aria-label="Medium">
             <i class="fa-brands fa-medium"></i>
-          </span>
+          </a>
 
-          <span onclick="window.open('{{ site.data.main_info.youtube }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.youtube }}" target="_blank" rel="me noopener" aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
-          </span>
+          </a>
 
-          <span onclick="window.open('{{ site.data.main_info.instagram }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.instagram }}" target="_blank" rel="me noopener" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
-          </span>
+          </a>
         </div>
       </div>
       <div class="row" style="margin-top: 10px;">
